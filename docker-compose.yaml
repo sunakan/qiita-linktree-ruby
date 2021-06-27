@@ -1,0 +1,20 @@
+---
+
+version: '3.8'
+
+services:
+  app:
+    image: ruby:3-buster
+    working_dir: /var/local/app/
+    volumes:
+      - type: volume
+        source: bundle
+        target: /usr/local/bundle
+      - type: bind
+        source: ${PWD}/app/
+        target: /var/local/app/
+    environment:
+      QIITA_ACCESS_TOKEN: ${QIITA_ACCESS_TOKEN}
+
+volumes:
+  bundle:
