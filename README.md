@@ -12,3 +12,10 @@ $ make run url=https://qiita.com/${USER_NAME}/items/xxxxxxxxx
 ```
 $ make clean
 ```
+
+## Qiita API Tokenを利用する時
+
+```
+$ cp .envrc.sample .envrc
+$ vim .envrc
+```
